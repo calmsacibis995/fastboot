@@ -33,9 +33,9 @@ void get_my_path(char s[PATH_MAX])
 {
     char *x;
     ProcessSerialNumber psn;
-    GetCurrentProcess(&psn);
+    //GetCurrentProcess(&psn);
     CFDictionaryRef dict;
-    dict = ProcessInformationCopyDictionary(&psn, 0xffffffff);
+    //dict = ProcessInformationCopyDictionary(&psn, 0xffffffff);
     CFStringRef value = (CFStringRef)CFDictionaryGetValue(dict,
                 CFSTR("CFBundleExecutable"));
     CFStringGetCString(value, s, PATH_MAX - 1, kCFStringEncodingUTF8);

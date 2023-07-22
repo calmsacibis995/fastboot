@@ -392,7 +392,7 @@ static int init_usb(ifc_match_func callback, usb_handle **handle) {
     }
 
     result = IOServiceGetMatchingServices(
-            kIOMasterPortDefault, matchingDict, &iterator);
+            kIOMainPortDefault, matchingDict, &iterator);
 
     if (result != 0) {
         ERR("Could not create iterator.");
